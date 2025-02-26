@@ -137,7 +137,7 @@ opacity:0 ;
 }
 
 .progress-line.css span{
-    width:70% ;
+    width:10% ;
     
 }
 
@@ -147,23 +147,103 @@ opacity:0 ;
     
 }
 
-.progress-line.angular span{
-    width:70% ;
+.progress-line.php span{
+    width:100% ;
     
 }
 
-.progress-line span::after{
+.progress-line span ::before{
+
+    content:""; 
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color:#000 ;
+    top:-10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity:0 ;
+
+
+
+}
+
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+/* Container for radial bars */
+.radial-bars{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.radial-bars .radial-bar {
+    width: 50%;
+    margin-bottom: 10px;
+    position: relative;
+    height: 170px;
+}
+
+.radial-bars .radial-bar svg {
+    width: 50%;
+    margin-bottom: 10px;
+    position: relative;
+    height: 170px;
+}
+/* Individual radial bar */
+
+
+/* Tooltip after each progress bar */
+.progress-line span::after {
     position: absolute;
     padding: 1px 8px;
     background-color: #000;
     color: #fff;
     font-size: 12px;
     border-radius: 3px;
-    top:-28;
-    right: -28;
+    top: -28px;
+    left: var(--tooltip-position, 50%); /* Use the dynamic tooltip position */
+    transform: translateX(-50%);
     animation: showText 0.5s 1.5s linear forwards;
-    
+    opacity: 0;
 }
+
+/* Specific content for each progress bar */
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "100%";
+}
+
+.progress-line.javascript span::after {
+    content: "90%";
+}
+
+.progress-line.php span::after {
+    content: "90%";
+}
+
+/* Animation for showing the tooltip */
+@keyframes showText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .section{
     display: flex;
     flex-wrap: wrap;
