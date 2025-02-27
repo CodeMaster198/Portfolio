@@ -181,9 +181,9 @@ opacity:0 ;
 .radial-bars{
     width: 100%;
     display: flex;
-    margin-bottom: 10px;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: flex-start;
 }
 .radial-bars .radial-bar {
     width: 50%;
@@ -191,14 +191,106 @@ opacity:0 ;
     position: relative;
     height: 170px;
 }
-
+  
 .radial-bars .radial-bar svg {
-    width: 50%;
-    margin-bottom: 10px;
-    position: relative;
-    height: 170px;
+    width: 120px;
+    height: 160px;
+    transform:translate(-50%,-50%) rotate(-90deg) ;
+    position: absolute;
+    top:50% ;
+    left:50%;
+
+}
+
+.radial-bars .percentage{
+    position: absolute;
+    top:50%;
+    left:50%; 
+    transform: translate(-50%,-50%);
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+
+}
+
+.radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left:50%;
+    bottom: -5px;
+    transform:translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+
+}
+
+
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
 }
 /* Individual radial bar */
+/* Individual radial bar paths */
+.path{
+    stroke-width: 10;
+    stroke:#0EF;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+/* Path Animations */
+.path-1{
+    animation: animate-path1 1s 1s linear forwards;
+}
+.path-2{
+    animation: animate-path2 1s 1s linear forwards;
+}
+.path-3{
+    animation: animate-path3 1s 1s linear forwards;
+}
+.path-4{
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+/* Keyframes for Path Animations */
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50; /* Example for 10% completion */
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175; /* Example for 35% completion */
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 125; /* Example for 25% completion */
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 75; /* Example for 15% completion */
+    }
+}
 
 
 /* Tooltip after each progress bar */
