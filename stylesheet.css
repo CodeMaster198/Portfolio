@@ -65,12 +65,22 @@ body{
     width: 600px;
     height: 500px;
     padding: 75px 90px;
-    margin-left: 180px;
+    margin-right: 150px;
+    
 
 }
 @media screen and (max-width: 800px) {
     .container1 {
         margin-left: 50px;
+        margin-right: 0;
+
+    }
+}
+@media screen and (max-width: 375px) {
+    .container1 {
+        margin-left: 0px;
+        margin-right: 0;
+
     }
 }
 .heading1{
@@ -445,7 +455,6 @@ opacity:0 ;
     width:100%;
     justify-content: space-between;
     height:100vh;
-    background: url("Purple.png") no-repeat;
     background-size: cover;
     background-position: cover;
     background-position: center;
@@ -802,7 +811,7 @@ height: 100%;
 }
 
 .contact-form form input,
-form textarea {
+form textarea ,select{
     border: none;
     outline: none;
     width: 90%;

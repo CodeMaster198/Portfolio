@@ -36,8 +36,9 @@
                     <a href="#" style="--i:7"><i class='bx bxl-instagram'></i></a>
                     <a href="#" style="--i:8"><i class='bx bxl-whatsapp'></i></a>
                     <a href="#" style="--i:9"><i class='bx bxl-tiktok'></i></a>
-
+                    </div>
                 </div>
+                
                 <a href="#about" class="btn-box">More About</a>
         </div>
         <span class="home-imgHover"></span>
@@ -278,7 +279,12 @@
         <form action="forms/contact.php" method="post" class="php-email-form" enctype="multipart/form-data">
             <input id="name" name="name" type="text" placeholder="Enter Your Name" required>
             <input id="email" name="email" type="email" placeholder="Enter Your Email" required>
-            <input id="sujet" name="sujet" type="text" placeholder="Enter Your Subject">
+            <select id="sujet" name="sujet" required>
+                <option value="" disabled selected>Select Your Subject</option>
+                <option value="portfolio">Portfolio</option>
+                <option value="site vitrine">Site Vitrine</option>
+                <option value="site e-commerce">Site E-commerce</option>
+            </select>
             <textarea name="message" id="message" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
             <input type="submit" value="submit" class="send">
         </form>

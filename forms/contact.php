@@ -9,8 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $type_client = $_POST['name'] ?? '';
     $nom_prenom = $_POST['email'] ?? '';
     $raison_social = $_POST['sujet'] ?? '';
+    $raison_social1 = $_POST['message'] ?? '';
 
 
+    
     $fileContent = ''; // Initialisation
 
     // Créez une nouvelle instance de PHPMailer
@@ -36,7 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2>Nouveau message reçu :</h2>
         <p><strong>Type de client :</strong> $type_client</p>
         <p><strong>Nom et Prénom :</strong> $nom_prenom</p>
-        <p><strong>Raison Sociale :</strong> $raison_social</p>
+        <p><strong>Type Site :</strong> $raison_social</p>
+        <p><strong>Sujet :</strong> $raison_social1</p>
+
  
         ";
 
