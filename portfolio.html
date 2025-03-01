@@ -97,9 +97,7 @@
             <div>
                 <i class="bx bxl-apple" style="color:#00eeff"></i>
                 <h2>SEO <span>(Search Engine optimization)</span></h2> 
-                <p>En tant qu’ingénieur web, je comprends l’importance de la visibilité en ligne pour toute entreprise. L'optimisation pour les moteurs de recherche (SEO) est essentielle pour attirer des visiteurs qualifiés et améliorer le classement d’un site web dans les résultats de recherche.
-
-                    Mon approche du SEO se concentre sur deux aspects clés : l'optimisation on-page et l'optimisation off-page. Je m'assure que chaque site que je développe est optimisé pour offrir la meilleure expérience possible aux utilisateurs et être bien référencé par les moteurs de recherche.</p>
+                <p>As a web engineer, I understand the importance of online visibility for any business. Search Engine Optimization (SEO) is essential for attracting qualified visitors and improving a website’s ranking in search results. My approach to SEO focuses on two key aspects: on-page optimization and off-page optimization. I ensure that every site I develop is optimized to provide the best possible user experience and achieve strong search engine rankings.</p>
                     <a href="#" class="read">Learn More</a>
                     
 
@@ -258,11 +256,13 @@
     <div class="contact-text">
         <h2>Contact <span>Me</span></h2>
         <h4>Let's work Together</h4>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic nisi quod accusantium voluptatum facere modi velit doloremque! Quam doloribus consectetur nobis, explicabo, optio, tempora odio velit veniam culpa numquam eos.</p>
+        <p>I create modern, user-friendly, and SEO-optimized websites to help you attract more customers and grow your brand. Whether you need a new site or a redesign, I’ll build a fast, responsive, and stunning website tailored to your needs.
+
+            💡 Let’s bring your vision to life—contact me today!</p>
         <div class="contact-list">
             <ul>
-                <li><i class="bx bxs-send"></i>contact@gmail.com</li>
-                <li><i class="bx bxs-phone"></i>0123456789</li>
+                <li><i class="bx bxs-send" ></i>oussemas410@gmail.com</li>
+                <li><i class="bx bxs-phone"></i>+216 56 885 263 </li>
             </ul>
         </div>
 
@@ -276,12 +276,14 @@
     
     <div class="contact-form">
         <form action="forms/contact.php" method="post" class="php-email-form" enctype="multipart/form-data">
-            <input id="name" type="text" placeholder="Enter Your Name" required>
-            <input id="email" type="email" placeholder="Enter Your Email" required>
-            <input id="sujet"type="text" placeholder="Enter Your Subject">
-            <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
+            <input id="name" name="name" type="text" placeholder="Enter Your Name" required>
+            <input id="email" name="email" type="email" placeholder="Enter Your Email" required>
+            <input id="sujet" name="sujet" type="text" placeholder="Enter Your Subject">
+            <textarea name="message" id="message" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
             <input type="submit" value="submit" class="send">
         </form>
+    </div>
+    
     </div>
 </section>
 <div class="last-text">
@@ -294,5 +296,21 @@
   </body>
   </html>
 
-
+  <script>
+    // Fonction pour récupérer les paramètres de l'URL
+    function getUrlParameter(name) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(name);
+    }
+  
+    // Vérifier si "showAlert=1" est dans l'URL
+    if (getUrlParameter('showAlert') === '1') {
+        alert("Votre message a été envoyé avec succès !");
+        
+        // Supprimer "showAlert" de l'URL après affichage
+        const newUrl = window.location.pathname;
+        window.history.replaceState(null, "", newUrl);
+    }
+  </script>
+  
 

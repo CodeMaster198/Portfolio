@@ -65,10 +65,14 @@ body{
     width: 600px;
     height: 500px;
     padding: 75px 90px;
-    margin-left: 70px;
+    margin-left: 180px;
 
 }
-
+@media screen and (max-width: 800px) {
+    .container1 {
+        margin-left: 50px;
+    }
+}
 .heading1{
     text-align: center;
     text-decoration: underline;
