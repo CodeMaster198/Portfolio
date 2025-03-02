@@ -38,8 +38,10 @@
                     <a href="#" style="--i:9"><i class='bx bxl-tiktok'></i></a>
                     </div>
                 </div>
-                
-                <a href="#about" class="btn-box">More About</a>
+                <div class="button-container">
+                    <button class="btn-box" onclick="downloadCV()">Download CV</button>
+                    <a href="#about" class="btn-box">More About</a>
+                </div>
         </div>
         <span class="home-imgHover"></span>
 
@@ -236,11 +238,12 @@
     </div>
 
     <div class="row">
-        <img src="resources/Capture.PNG">
+        <img src="resources/Capture2.PNG">
         <div class="layer">
-            <h5>UI/UX Design</h5>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur vitae, eveniet sequi eligendi doloribus doloremque unde. Velit officiis voluptas, labore, repudiandae saepe nemo suscipit quisquam asperiores 
-                nisi maiores voluptate omnis.</p>
+            <h5>TREND IT</h5>
+            <p>TREND-IT is a consulting and technical expertise firm that supports our clients in their Digital Transformation projects.
+
+            </p>
 
                 <a href="#"><i class="bx bx-link-external" style="color: aliceblue;"></i></a>
              </div>
@@ -317,6 +320,16 @@
         const newUrl = window.location.pathname;
         window.history.replaceState(null, "", newUrl);
     }
+function downloadCV() {
+    
+    const link = document.createElement('a');
+    link.href = "https://drive.google.com/file/d/19ziYyWu_0lRPHbqNzZBJDTu9vGTO8U0P/view?usp=sharing";
+    link.setAttribute("download", "logo dreams.pdf"); 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+}
   </script>
   
 
