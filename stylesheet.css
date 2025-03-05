@@ -61,6 +61,7 @@ body{
 
 }
 
+<<<<<<< HEAD
 .container1{
     width: 600px;
     height: 500px;
@@ -70,6 +71,17 @@ body{
 }
 
 
+=======
+.container1 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 50px 90px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+>>>>>>> 4365df4 (dernier commit)
 .heading1{
     text-align: center;
     text-decoration: underline;
